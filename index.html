@@ -18,21 +18,21 @@
           <a class="nav-link" data-bs-toggle="tab" href="#signin">Authentification</a>
         </li>
         <li class="nav-item">
-          <a class="nav-link" data-bs-toggle="tab" href="#signup">Enregistrement</a>
+          <a class="nav-link" data-bs-toggle="tab" href="#signup" >Enregistrement</a>
         </li>
       </ul>
 
       <div class="tab-content">
         <div id="signin" class="container tab-pane active"><br>
-          <form class="row g-3 needs-validation">
+          <form method="post" action="signin.php" class="row g-3 needs-validation">
             <div class="col-md-4 ">
               <label for="signin-email" class="form-label">email</label>
               <input type="text" class="form-control" id="signin-email" placeholder="Votre adresse email..."
-                     required>
+                     name = "signin-email" required>
             </div>
             <div class="col-md-4">
-              <label for="signin-pwd" class="form-label">Mot de passe</label>
-              <input type="password" class="form-control" id="signin-pwd" placeholder="Votre mot de passe"
+              <label for="signin-pwd"  class="form-label">Mot de passe</label>
+              <input type="password" name="signin-pwd" class="form-control" id="signin-pwd" placeholder="Votre mot de passe"
                      required>
             </div>
             <div class="row g-3">
@@ -47,30 +47,31 @@
         </div>
         <div id="signup" class="container tab-pane fade"><br>
           <h4>Formulaire d'inscription</h4>
-          <form class="row g-3 needs-validation">
+          <form class="row g-3 needs-validation" method="post" action="signup.php" >
             <div class="row g-3">
-              <div class="col-md-2"><label for="signup-civil" class="form-label">Civilité</label>
-                <select class="form-select" aria-label="Default select example" id="signup-civil">
+              <div class="col-md-2">
+                <label for="signup-civil" class="form-label">Civilité</label>
+                <select class="form-select" aria-label="Default select example" name="signup-civil" id="signup-civil">
                   <option value="1" selected>M</option>
                   <option value="2">Mme</option>
                 </select>
               </div>
               <div class="col-md-6">
                 <label for="signup-last" class="form-label">Nom</label>
-                <input type="text" class="form-control" id="signup-last" placeholder="Votre nom..." required>
+                <input type="text" class="form-control" id="signup-last" placeholder="Votre nom..." name = "signup-last" required>
               </div>
             </div>
             <div class="row g-3">
               <div class="col-md-8">
                 <label for="signup-email" class="form-label">Adresse email</label>
                 <input type="email" class="form-control" id="signup-email" placeholder="Votre adresse email..."
-                       required>
+                      name="signup-email" required>
               </div>
             </div>
             <div class="row g-3">
               <div class="col-md-8">
                 <label for="signup-pwd" class="form-label">Mot de passe</label>
-                <input type="password" class="form-control" id="signup-pwd" placeholder="Votre mot de passe..." required>
+                <input type="password" class="form-control" id="signup-pwd" placeholder="Votre mot de passe..."  name="signup-pwd" required>
               </div>
             </div>
 

@@ -11,3 +11,14 @@ function debugForm($variable, $type = "post") : void {
   echo "<p class='lead'>Contenu du formulaire : </p>";
   echo "<pre class='text-white bg-warning rounded'>" . $output . "</pre>";
 }
+
+
+
+
+
+function debug($data)
+{
+    echo "<pre>";
+    var_dump($data);
+    echo "</pre>";
+}
